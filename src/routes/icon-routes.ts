@@ -11,7 +11,7 @@ class IconRoutes {
 	private config(): void {
 		this.router.use(express.json());
 
-		this.router.get('/', (req: Request, res: Response) => 
+		this.router.post('/', (req: Request, res: Response) => 
 			iconController.defaultRouteHandler(req, res)
 		);
 		
