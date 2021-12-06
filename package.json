@@ -1,7 +1,31 @@
 {
-  "name": "yarn3-typescript-template",
-  "packageManager": "yarn@3.1.1",
-  "devDependencies": {
-    "typescript": "^4.5.2"
-  }
+	"name": "fluent-explorer-server",
+	"version": "0.1.0",
+	"packageManager": "yarn@3.1.0",
+	"main": "dist/server.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/server.js",
+		"build:scripts": "tsc --project ./build/tsconfig.json",
+		"build:db": "node ./build/dist/build-database.js --s=./node_modules/@fluentui/svg-icons/icons --d=fluent-icon-directory --c=icons"
+	},
+	"devDependencies": {
+		"@fluentui/svg-icons": "^1.1.152",
+		"@types/body-parser": "^1",
+		"@types/express": "^4.17.13",
+		"@types/node": "^16.11.10",
+		"@types/yargs": "^17",
+		"@yarnpkg/fslib": "^2.6.1-rc.2",
+		"@yarnpkg/libzip": "^2.2.3-rc.2",
+		"typescript": "^4.4.4",
+		"yargs": "^17.2.1"
+	},
+	"dependencies": {
+		"ajv": "^8.8.2",
+		"basic-auth-connect": "^1.0.0",
+		"body-parser": "^1.19.0",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"mongodb": "^4.2.1"
+	}
 }

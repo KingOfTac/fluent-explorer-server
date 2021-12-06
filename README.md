@@ -1,2 +1,3 @@
-# yarn3-typescript-template
-Template for projects using Yarn3 zero installs and typescript
+# FluentUI Icons Explorer Server
+
+Backend api for an application to search for and view Microsoft's FluentUI System Icons, something that is lacking from the official project.

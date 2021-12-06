@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+	  "esModuleInterop": true,
+	  "sourceMap": true,
+	  "skipLibCheck": true,
+	  "strictNullChecks": true,
+	  "experimentalDecorators": true,
+	  "strict": false,
+	  "moduleResolution": "node",
+	  "target": "ES2015",
+	  "module": "commonjs",
+	  "outDir": "./bin",
+	  "rootDir": "./src",
+	},
+	"include": ["src/**/*.ts"]
+  }
