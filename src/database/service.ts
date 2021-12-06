@@ -1,6 +1,6 @@
-import type { Collection, Db } from 'mongodb';
 import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
+import type { Collection, Db } from 'mongodb';
 
 export const collections: { icons?: Collection } = {};
 

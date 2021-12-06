@@ -1,6 +1,10 @@
 import express from 'express';
-import type { Application } from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+import helmet from 'helmet';
+import compression from 'compression';
+import type { Application } from 'express';
+
 import { mainRoutes, iconRoutes } from './routes';
 import { connectToDatabase } from './database';
 
@@ -13,6 +17,10 @@ class App {
 	}
 
 	private config(): void {
+		this.app.use(helmet());
+		this.app.use(cors());
+		this.app.use(compression());
+
 		connectToDatabase()
 			.then(() => {
 				this.app.use(bodyParser.json());
